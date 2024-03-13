@@ -1,0 +1,71 @@
+|DUT
+input_vector[0] => half_sub:add_instance.B
+input_vector[1] => half_sub:add_instance.A
+output_vector[0] <= half_sub:add_instance.Bo
+output_vector[1] <= half_sub:add_instance.D
+
+
+|DUT|half_sub:add_instance
+A => INVERTER:I1.A
+A => xor_gate:X1.A
+B => xor_gate:X1.B
+B => and_gate:A1.B
+D <= xor_gate:X1.Y
+Bo <= and_gate:A1.Y
+
+
+|DUT|half_sub:add_instance|INVERTER:I1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|half_sub:add_instance|xor_gate:X1
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|half_sub:add_instance|xor_gate:X1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|half_sub:add_instance|xor_gate:X1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|half_sub:add_instance|xor_gate:X1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|half_sub:add_instance|xor_gate:X1|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|half_sub:add_instance|and_gate:A1
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|half_sub:add_instance|and_gate:A1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|half_sub:add_instance|and_gate:A1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

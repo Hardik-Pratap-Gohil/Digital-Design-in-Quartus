@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+
+entity AND4 is
+	port (A,B,C,D: in std_logic; O: out std_logic);
+end entity AND4;
+
+architecture Struct of AND4 is
+	signal AB,CD : std_logic;
+	component AND_GATE is
+		port (A,B: in std_logic; output: out std_logic);
+	end component AND_GATE;
+begin
+	AND1: AND_GATE port map (A=>A,B=>B,output=>AB);
+	AND2: AND_GATE port map (A=>C,B=>D,output=>CD);
+	AND3: AND_GATE port map (A=>AB,B=>CD,output=>O);
+end Struct;

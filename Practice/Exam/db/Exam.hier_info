@@ -1,0 +1,892 @@
+|DUT
+input_vector[0] => bcdtoX:add_instance.M
+input_vector[1] => bcdtoX:add_instance.B[0]
+input_vector[2] => bcdtoX:add_instance.B[1]
+input_vector[3] => bcdtoX:add_instance.B[2]
+input_vector[4] => bcdtoX:add_instance.B[3]
+input_vector[5] => bcdtoX:add_instance.A[0]
+input_vector[6] => bcdtoX:add_instance.A[1]
+input_vector[7] => bcdtoX:add_instance.A[2]
+input_vector[8] => bcdtoX:add_instance.A[3]
+output_vector[0] << bcdtoX:add_instance.Y[0]
+output_vector[1] << bcdtoX:add_instance.Y[1]
+output_vector[2] << bcdtoX:add_instance.Y[2]
+output_vector[3] << bcdtoX:add_instance.Y[3]
+output_vector[4] << bcdtoX:add_instance.Y[4]
+
+
+|DUT|bcdtoX:add_instance
+A[0] => XA.IN0
+A[0] => XA.IN0
+A[0] => XA.IN0
+A[0] => XA[1].IN0
+A[0] => XA[0].IN1
+A[1] => XA.IN0
+A[1] => XA.IN0
+A[1] => XA.IN0
+A[1] => XA[1].IN1
+A[1] => XA.IN0
+A[1] => XA.IN1
+A[1] => XA.IN1
+A[2] => XA.IN1
+A[2] => XA.IN1
+A[2] => XA.IN1
+A[2] => XA.IN1
+A[2] => XA.IN1
+A[2] => XA.IN0
+A[3] => XA.IN1
+A[3] => XA.IN1
+A[3] => XA.IN1
+B[0] => XB.IN0
+B[0] => XB.IN0
+B[0] => XB.IN0
+B[0] => XB[1].IN0
+B[0] => XB[0].IN1
+B[1] => XB.IN0
+B[1] => XB.IN0
+B[1] => XB.IN0
+B[1] => XB[1].IN1
+B[1] => XB.IN0
+B[1] => XB.IN1
+B[1] => XB.IN1
+B[2] => XB.IN1
+B[2] => XB.IN1
+B[2] => XB.IN1
+B[2] => XB.IN1
+B[2] => XB.IN1
+B[2] => XB.IN0
+B[3] => XB.IN1
+B[3] => XB.IN1
+B[3] => XB.IN1
+M => AdderSubtractor:dsd.M
+Y[0] <= AdderSubtractor:dcd.S0
+Y[1] <= AdderSubtractor:dcd.S1
+Y[2] <= AdderSubtractor:dcd.S2
+Y[3] <= AdderSubtractor:dcd.S3
+Y[4] <= AND_2:AN.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd
+A0 => F_ADDER:F1.A
+A1 => F_ADDER:F2.A
+A2 => F_ADDER:F3.A
+A3 => F_ADDER:F4.A
+B0 => XOR_GATE:X1.B
+B1 => XOR_GATE:X2.B
+B2 => XOR_GATE:X3.B
+B3 => XOR_GATE:X4.B
+M => XOR_GATE:X1.A
+M => XOR_GATE:X2.A
+M => XOR_GATE:X3.A
+M => XOR_GATE:X4.A
+M => F_ADDER:F1.Cin
+Cout <= F_ADDER:F4.Cout
+S0 <= F_ADDER:F1.S
+S1 <= F_ADDER:F2.S
+S2 <= F_ADDER:F3.S
+S3 <= F_ADDER:F4.S
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X1
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.A
+OUTPUT <= NAND_2:NAND4.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X1|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X1|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X1|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X1|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X2
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.A
+OUTPUT <= NAND_2:NAND4.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X2|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X2|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X2|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X2|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X3
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.A
+OUTPUT <= NAND_2:NAND4.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X3|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X3|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X3|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X3|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X4
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.A
+OUTPUT <= NAND_2:NAND4.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X4|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X4|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X4|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|XOR_GATE:X4|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F1
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.B
+Cin => NAND_2:NAND5.B
+Cin => NAND_2:NAND7.B
+S <= NAND_2:NAND8.Y
+Cout <= NAND_2:NAND9.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F1|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F1|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F1|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F1|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F1|NAND_2:NAND5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F1|NAND_2:NAND6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F1|NAND_2:NAND7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F1|NAND_2:NAND8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F1|NAND_2:NAND9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F2
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.B
+Cin => NAND_2:NAND5.B
+Cin => NAND_2:NAND7.B
+S <= NAND_2:NAND8.Y
+Cout <= NAND_2:NAND9.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F2|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F2|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F2|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F2|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F2|NAND_2:NAND5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F2|NAND_2:NAND6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F2|NAND_2:NAND7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F2|NAND_2:NAND8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F2|NAND_2:NAND9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F3
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.B
+Cin => NAND_2:NAND5.B
+Cin => NAND_2:NAND7.B
+S <= NAND_2:NAND8.Y
+Cout <= NAND_2:NAND9.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F3|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F3|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F3|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F3|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F3|NAND_2:NAND5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F3|NAND_2:NAND6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F3|NAND_2:NAND7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F3|NAND_2:NAND8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F3|NAND_2:NAND9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F4
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.B
+Cin => NAND_2:NAND5.B
+Cin => NAND_2:NAND7.B
+S <= NAND_2:NAND8.Y
+Cout <= NAND_2:NAND9.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F4|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F4|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F4|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F4|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F4|NAND_2:NAND5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F4|NAND_2:NAND6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F4|NAND_2:NAND7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F4|NAND_2:NAND8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dsd|F_ADDER:F4|NAND_2:NAND9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd
+A0 => F_ADDER:F1.A
+A1 => F_ADDER:F2.A
+A2 => F_ADDER:F3.A
+A3 => F_ADDER:F4.A
+B0 => XOR_GATE:X1.B
+B1 => XOR_GATE:X2.B
+B2 => XOR_GATE:X3.B
+B3 => XOR_GATE:X4.B
+M => XOR_GATE:X1.A
+M => XOR_GATE:X2.A
+M => XOR_GATE:X3.A
+M => XOR_GATE:X4.A
+M => F_ADDER:F1.Cin
+Cout <= F_ADDER:F4.Cout
+S0 <= F_ADDER:F1.S
+S1 <= F_ADDER:F2.S
+S2 <= F_ADDER:F3.S
+S3 <= F_ADDER:F4.S
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X1
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.A
+OUTPUT <= NAND_2:NAND4.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X1|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X1|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X1|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X1|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X2
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.A
+OUTPUT <= NAND_2:NAND4.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X2|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X2|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X2|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X2|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X3
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.A
+OUTPUT <= NAND_2:NAND4.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X3|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X3|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X3|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X3|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X4
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.A
+OUTPUT <= NAND_2:NAND4.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X4|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X4|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X4|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|XOR_GATE:X4|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F1
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.B
+Cin => NAND_2:NAND5.B
+Cin => NAND_2:NAND7.B
+S <= NAND_2:NAND8.Y
+Cout <= NAND_2:NAND9.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F1|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F1|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F1|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F1|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F1|NAND_2:NAND5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F1|NAND_2:NAND6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F1|NAND_2:NAND7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F1|NAND_2:NAND8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F1|NAND_2:NAND9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F2
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.B
+Cin => NAND_2:NAND5.B
+Cin => NAND_2:NAND7.B
+S <= NAND_2:NAND8.Y
+Cout <= NAND_2:NAND9.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F2|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F2|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F2|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F2|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F2|NAND_2:NAND5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F2|NAND_2:NAND6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F2|NAND_2:NAND7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F2|NAND_2:NAND8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F2|NAND_2:NAND9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F3
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.B
+Cin => NAND_2:NAND5.B
+Cin => NAND_2:NAND7.B
+S <= NAND_2:NAND8.Y
+Cout <= NAND_2:NAND9.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F3|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F3|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F3|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F3|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F3|NAND_2:NAND5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F3|NAND_2:NAND6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F3|NAND_2:NAND7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F3|NAND_2:NAND8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F3|NAND_2:NAND9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F4
+A => NAND_2:NAND1.A
+A => NAND_2:NAND2.A
+B => NAND_2:NAND1.B
+B => NAND_2:NAND3.B
+Cin => NAND_2:NAND5.B
+Cin => NAND_2:NAND7.B
+S <= NAND_2:NAND8.Y
+Cout <= NAND_2:NAND9.Y
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F4|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F4|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F4|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F4|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F4|NAND_2:NAND5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F4|NAND_2:NAND6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F4|NAND_2:NAND7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F4|NAND_2:NAND8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AdderSubtractor:dcd|F_ADDER:F4|NAND_2:NAND9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|bcdtoX:add_instance|AND_2:AN
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

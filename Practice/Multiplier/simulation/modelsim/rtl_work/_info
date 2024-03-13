@@ -1,0 +1,667 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/simulation/modelsim
+Eadder6bit
+Z1 w1695753522
+Z2 DPx4 work 5 gates 0 22 @eB5S<QWaBmXNA4jc;3?G2
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/6bitadder.vhdl
+Z6 FC:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/6bitadder.vhdl
+l0
+L6
+VbjUZkb0ZCGSgGzP5cnnTN0
+!s100 dSZChgY;d92;1]Wo=R=dU1
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1695753993
+!i10b 1
+Z9 !s108 1695753993.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/6bitadder.vhdl|
+Z11 !s107 C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/6bitadder.vhdl|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Astruct
+R2
+R3
+R4
+DEx4 work 9 adder6bit 0 22 bjUZkb0ZCGSgGzP5cnnTN0
+l15
+L10
+VFMG?<ae1nE<Q001T20eNC3
+!s100 ?VfAI3ZK28E7?89=Mh<iV2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eand_2
+Z14 w1691572975
+R3
+R4
+R0
+Z15 8C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/Gates.vhdl
+Z16 FC:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/Gates.vhdl
+l0
+L53
+VU7DI`Tzl@EfAQ?4z53E2F2
+!s100 1`nWBgISBZCVoBKm`L3TM3
+R7
+31
+Z17 !s110 1695753992
+!i10b 1
+Z18 !s108 1695753992.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/Gates.vhdl|
+Z20 !s107 C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/Gates.vhdl|
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 5 and_2 0 22 U7DI`Tzl@EfAQ?4z53E2F2
+l58
+L57
+Vlhgfe[LY0eM?e_R:VHaZ:1
+!s100 6Ea@T?V>e39O6cgPlk<iS0
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Eand_gate
+Z21 w1695558344
+R2
+R3
+R4
+R0
+Z22 8C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/AND.vhdl
+Z23 FC:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/AND.vhdl
+l0
+L6
+Vzel7hR70;UgSUIQcBGl882
+!s100 02ZEkBd?<5GWheW6Eie5c1
+R7
+31
+R17
+!i10b 1
+R18
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/AND.vhdl|
+Z25 !s107 C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/AND.vhdl|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 8 and_gate 0 22 zel7hR70;UgSUIQcBGl882
+l12
+L10
+VWAT:@ERDjiXRDzFYPPcHX1
+!s100 n@H?=Pc]>zR1U5GYBPC012
+R7
+31
+R17
+!i10b 1
+R18
+R24
+R25
+!i113 1
+R12
+R13
+Edut
+Z26 w1695751013
+R3
+R4
+R0
+Z27 8C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/DUT.vhdl
+Z28 FC:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/DUT.vhdl
+l0
+L8
+VVG6dbK4Tlfh>R4dHN<:jf2
+!s100 kaDPd6g<lPUio?SJZhDOG1
+R7
+31
+R17
+!i10b 1
+R18
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/DUT.vhdl|
+Z30 !s107 C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/DUT.vhdl|
+!i113 1
+R12
+R13
+Adutwrap
+R3
+R4
+DEx4 work 3 dut 0 22 VG6dbK4Tlfh>R4dHN<:jf2
+l18
+L13
+VgXLAAza3Z0@1L1Uc3izfW3
+!s100 ;6>KbZzdShBN[i04NjaRL0
+R7
+31
+R17
+!i10b 1
+R18
+R29
+R30
+!i113 1
+R12
+R13
+Ef_adder
+Z31 w1695615303
+R2
+R3
+R4
+R0
+Z32 8C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/FullAdder.vhdl
+Z33 FC:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/FullAdder.vhdl
+l0
+L6
+VGmLYS<2P83TXdIS4[Lf<53
+!s100 Se0m0Cki1gCBo6U9`F>9_1
+R7
+31
+R8
+!i10b 1
+R9
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/FullAdder.vhdl|
+Z35 !s107 C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/FullAdder.vhdl|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 7 f_adder 0 22 GmLYS<2P83TXdIS4[Lf<53
+l21
+L10
+V8;oO1`o8K4^SkW?KbZ3l22
+!s100 neXmWLo]PX]<JnD:om<g43
+R7
+31
+R8
+!i10b 1
+R9
+R34
+R35
+!i113 1
+R12
+R13
+Pgates
+R3
+R4
+R14
+R0
+R15
+R16
+l0
+L3
+V@eB5S<QWaBmXNA4jc;3?G2
+!s100 N@iIgLVJlGZzK36CC:zf23
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Ehalf_adder
+R14
+R3
+R4
+R0
+R15
+R16
+l0
+L120
+VOAZ_4ioR^1B[UAcaA1zf51
+!s100 oLN8>k[AMhPS;D9;:Z@Pz0
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 10 half_adder 0 22 OAZ_4ioR^1B[UAcaA1zf51
+l125
+L124
+VflMPld^`b]>0KKXzZhX_91
+!s100 ]f4Ql:1od=>zjRGlb:Lm:0
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Einverter
+R14
+R3
+R4
+R0
+R15
+R16
+l0
+L41
+V82BXV;Uza[l3mE]`8B<HJ0
+!s100 dFc@GWJO@nF57X0IXFVfh0
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 8 inverter 0 22 82BXV;Uza[l3mE]`8B<HJ0
+l46
+L45
+V4]gW5EV5;RT@9C;Pga@SA0
+!s100 [DD^:ihbY=VNQeLiKKX_R1
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Emultiplier
+Z36 w1695753971
+R2
+R3
+R4
+R0
+Z37 8C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/Multiplier.vhdl
+Z38 FC:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/Multiplier.vhdl
+l0
+L6
+VmK6[?iUhf<0Rge`d3h;iB1
+!s100 nBCfl6O<5;6:67@DTLfWX2
+R7
+31
+R8
+!i10b 1
+R9
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/Multiplier.vhdl|
+Z40 !s107 C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/Multiplier.vhdl|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 10 multiplier 0 22 mK6[?iUhf<0Rge`d3h;iB1
+l16
+L10
+V<9]IHghXQCFCkdliOczDV2
+!s100 fK`zfNnAhWJoI7Qj@mIGN2
+R7
+31
+R8
+!i10b 1
+R9
+R39
+R40
+!i113 1
+R12
+R13
+Enand_2
+R14
+R3
+R4
+R0
+R15
+R16
+l0
+L64
+VS^YD8?>b_]W^^dkQa>_3m2
+!s100 S;kgn2U384cOg4>1Kcdn<2
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 6 nand_2 0 22 S^YD8?>b_]W^^dkQa>_3m2
+l69
+L68
+VS]`6`a7Bz3gbaB=WX@WdM2
+!s100 EBK=7IM2m_0=gIZGM@F7H1
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Enor_2
+R14
+R3
+R4
+R0
+R15
+R16
+l0
+L86
+V`A=6DP8fY`aBzcQ@Hgc?S1
+!s100 hCNF9lV5T>8fg2MR^]6f^0
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 5 nor_2 0 22 `A=6DP8fY`aBzcQ@Hgc?S1
+l91
+L90
+VIJ=]C?8]dETGzmXBGe8in2
+!s100 iWUJUdMb8DJi]m^=42G9F3
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Eor_2
+R14
+R3
+R4
+R0
+R15
+R16
+l0
+L75
+Ve?I6M>DO0lb4QOFDA10zP2
+!s100 _]<JbSG1DCI^d;kKCeeO:3
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 4 or_2 0 22 e?I6M>DO0lb4QOFDA10zP2
+l80
+L79
+V35?1APMW04D0M8BcdBhJ53
+!s100 kX9QLgDQM=e4dN7zDYk6o2
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Eor_gate
+Z41 w1695558860
+R2
+R3
+R4
+R0
+Z42 8C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/OR.vhdl
+Z43 FC:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/OR.vhdl
+l0
+L6
+V6]K7n7^]ff;IS_98?02?L1
+!s100 ?3R0QOA@j<hIkhHD_;o2@3
+R7
+31
+R17
+!i10b 1
+R18
+Z44 !s90 -reportprogress|300|-93|-work|work|C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/OR.vhdl|
+Z45 !s107 C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/OR.vhdl|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 7 or_gate 0 22 6]K7n7^]ff;IS_98?02?L1
+l12
+L10
+VQzNne?odAUm7bjHOVSkg[0
+!s100 S7WW4OD?nPR[5<7iA9:;?0
+R7
+31
+R17
+!i10b 1
+R18
+R44
+R45
+!i113 1
+R12
+R13
+Etestbench
+Z46 w1695751035
+R4
+R3
+R0
+Z47 8C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/Testbench.vhdl
+Z48 FC:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/Testbench.vhdl
+l0
+L7
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R7
+31
+R8
+!i10b 1
+R9
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/Testbench.vhdl|
+Z50 !s107 C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/Testbench.vhdl|
+!i113 1
+R12
+R13
+Abehave
+R4
+R3
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+l69
+L9
+VP2JJ75ozDgLE08IS60>Z_0
+!s100 ^lK`z2F72SbJiTFm=5=:;1
+R7
+31
+R8
+!i10b 1
+R9
+R49
+R50
+!i113 1
+R12
+R13
+Exnor_2
+R14
+R3
+R4
+R0
+R15
+R16
+l0
+L109
+VLHIUEA1`23`S5JTPo4JYA2
+!s100 M7SmBC<JLShUJ=5Tb^BGR1
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 6 xnor_2 0 22 LHIUEA1`23`S5JTPo4JYA2
+l114
+L113
+V]AR[iEm:1Y`=`f78Ab8?A2
+!s100 2L8]1Q4cBgn^[7D^6oj0;3
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Exor_2
+R14
+R3
+R4
+R0
+R15
+R16
+l0
+L98
+VV2P2KWfUW5e1Z=NMXBDJ;0
+!s100 DUe=@W;GH8KgEREMWIRML1
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 5 xor_2 0 22 V2P2KWfUW5e1Z=NMXBDJ;0
+l103
+L102
+VQUFBaT6OJ>c<=2In4b:>M1
+!s100 _g>6CYjRMmc7O[`k^N;co3
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Exor_gate
+Z51 w1695559486
+R2
+R3
+R4
+R0
+Z52 8C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/XOR.vhdl
+Z53 FC:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/XOR.vhdl
+l0
+L6
+V]lSB3I?;HQ3K:`ccLTfYa0
+!s100 ?6M31GU^l^zK_1UHIQ3Og2
+R7
+31
+R17
+!i10b 1
+R18
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/XOR.vhdl|
+Z55 !s107 C:/Users/Hardik Gohil/OneDrive - Indian Institute of Technology Bombay/Study/Digital Lab/Practice/Multiplier/XOR.vhdl|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 8 xor_gate 0 22 ]lSB3I?;HQ3K:`ccLTfYa0
+l12
+L10
+V:1<6[_OP1M3Z[R:RKCHXo1
+!s100 Z^_;BG=S<7d=B0egH?37N0
+R7
+31
+R17
+!i10b 1
+R18
+R54
+R55
+!i113 1
+R12
+R13

@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+
+entity multiplier is
+	port(A3,A2,A1,A0,B2,B1,B0: in std_logic; M6,M5,M4,M3,M2,M1,M0: out std_logic);
+end entity multiplier;
+
+architecture struct of multiplier is
+	component f_adder is
+		port(A,B,Cin: in std_logic; S,Cout: out std_logic);
+	end component f_adder;
+begin
+	A1: AND_2 port map(A => A0, B => B0, Y => A0B0);
+	A2: AND_2 port map(A => A1, B => B0, Y => A1B0);
+	A3: AND_2 port map(A => A0, B => B1, Y => A0B1);
+	A4: AND_2 port map(A => A2, B => B0, Y => A2B0);
+	A5: AND_2 port map(A => A1, B => B1, Y => A1B1);
+	A6: AND_2 port map(A => A0, B => B2, Y => A0B2);
+	A7: AND_2 port map(A => A3, B => B0, Y => A3B0);
+	A8: AND_2 port map(A => A2, B => B1, Y => A2B1);
+	A9: AND_2 port map(A => A1, B => B2, Y => A1B2);
+	A10: AND_2 port map(A => A3, B => B1, Y => A3B1);
+	A11: AND_2 port map(A => A2, B => B2, Y => A2B2);
+	A12: AND_2 port map(A => A3, B => B2, Y => A3B2);
+	A13: AND_2 port map(A => A0B0, B => A0B0, Y => M0);
+	F1: f_adder port map(A => A1B0, B => A0B1, Cin => '0', S => M1, Cout => C1);
+	F1: f_adder port map(A => A2B0, B => A1B1, Cin => C1, S => S1, Cout => S2);
+	F1: f_adder port map(A => A0B2, B => S1, Cin => S2, S => M2, Cout => C2);
+	F1: f_adder port map(A => A3B0, B => A2B1, Cin => C2, S => S3, Cout => S4);
+	F1: f_adder port map(A => A1B2, B => S3, Cin => S4, S => M3, Cout => C3);
+	F1: f_adder port map(A => A2B2, B => A3B1, Cin => C3, S => M4, Cout => C4);
+	F1: f_adder port map(A => A3B2, B => C4, Cin => '0', S => M5, Cout => M6);
+end architecture struct;

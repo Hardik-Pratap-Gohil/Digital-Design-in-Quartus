@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+
+entity mux4x1 is
+	port(In3,In2,In1,In0,S2,S1: in std_logic; Y: out std_logic);
+end entity mux4x1;
+
+architecture struct of mux4x1 is
+	component mux2x1 is
+		port(I0,I1,S: in std_logic; Y: out std_logic);
+	end component mux2x1;
+	signal Y1,Y2: std_logic;
+begin
+	M1: mux2x1 port map(I0 => In2, I1 => In3, S => S1, Y => Y1);
+	M2: mux2x1 port map(I0 => In0, I1 => In1, S => S1, Y => Y2);
+	M3: mux2x1 port map(I0 => Y2, I1 => Y1, S => S2, Y => Y);
+end architecture struct;

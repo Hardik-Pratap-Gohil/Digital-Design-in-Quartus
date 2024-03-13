@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+
+entity midsem is 
+	port(X3,X2,X1,X0,Y3,Y2,Y1,Y0: in std_logic; Z,N,V,L,G: out std_logic);
+end entity midsem;
+
+architecture struct of midsem is
+	component AdderSubtractor is
+		port(A0,A1,A2,A3,B0,B1,B2,B3,M: in std_logic;Cout, S0,S1,S2,S3: out std_logic); 
+	end component AdderSubtractor;
+	signal S0,S1,S2,S3,S0_BAR,S1_BAR,S2_BAR,S3_BAR,S5,S6: std_logic;
+begin
+	S: AdderSubtractor port map(A0 => X0, A1 => X1, A2 => X2, A3 => X3, B0 => Y0, B1 => Y1, B2 => Y2, B3 => Y3, M => '1', S0 => S0, S1 => S1, S2 => S2, S3 => S3);
+	I3: INVERTER port map(A => S3, Y => S3_BAR);
+	I2: INVERTER port map(A => S2, Y => S2_BAR);
+	I1: INVERTER port map(A => S1, Y => S1_BAR);
+	I0: INVERTER port map(A => S0, Y => S0_BAR);
+	A1: AND_2 port map(A => S3_BAR, B => S2_BAR, Y => S4);
+	A2: AND_2 port map(A => S4, B => S1_BAR, Y => S5);
+	A3: AND_2 port map(A => S0_BAR, B => S5, Y => S6);
+	A4: AND_2 port map(A => S6, B => S6, Y => Z);
+	O1: OR_2 port map(A => S3, B => S6, Y => L);
+	O2: OR_2 port map(A => S3_BAR, B => S6, Y => G);
+	O3: OR_2 port map(A => S3, B => S3, Y => N);
+	A5: AND_2 port map(A => S3, B => Y3, Y => S7);
+	I4: INVERTER port map(A => X3, Y => X3_BAR);
+	A6: AND_2 port map(A => X3_BAR, B => S7, Y => S8);
+	A7: AND_2 port map(A => X3, B => S3_BAR, Y => S9);
+	I5: INVERTER port map(A => Y3, Y => Y3_BAR);
+	A8: AND_2 port map(A => S9, B => Y3_BAR, Y => S10);
+	O4: OR_2 port map(A => S10, B => S8, Y => V);
+end architecture struct;

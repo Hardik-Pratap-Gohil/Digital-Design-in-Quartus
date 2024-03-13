@@ -1,0 +1,2375 @@
+|DUT
+input_vector[0] => multiplier:add_instance.B0
+input_vector[1] => multiplier:add_instance.B1
+input_vector[2] => multiplier:add_instance.B2
+input_vector[3] => multiplier:add_instance.A0
+input_vector[4] => multiplier:add_instance.A1
+input_vector[5] => multiplier:add_instance.A2
+input_vector[6] => multiplier:add_instance.A3
+output_vector[0] << multiplier:add_instance.M0
+output_vector[1] << multiplier:add_instance.M1
+output_vector[2] << multiplier:add_instance.M2
+output_vector[3] << multiplier:add_instance.M3
+output_vector[4] << multiplier:add_instance.M4
+output_vector[5] << multiplier:add_instance.M5
+output_vector[6] << multiplier:add_instance.M6
+
+
+|DUT|multiplier:add_instance
+A3 => AND_2:An7.A
+A3 => AND_2:An10.A
+A3 => AND_2:An12.A
+A2 => AND_2:An4.A
+A2 => AND_2:An8.A
+A2 => AND_2:An11.A
+A1 => AND_2:An2.A
+A1 => AND_2:An5.A
+A1 => AND_2:An9.A
+A0 => AND_2:An1.A
+A0 => AND_2:An3.A
+A0 => AND_2:An6.A
+B2 => AND_2:An6.B
+B2 => AND_2:An9.B
+B2 => AND_2:An11.B
+B2 => AND_2:An12.B
+B1 => AND_2:An3.B
+B1 => AND_2:An5.B
+B1 => AND_2:An8.B
+B1 => AND_2:An10.B
+B0 => AND_2:An1.B
+B0 => AND_2:An2.B
+B0 => AND_2:An4.B
+B0 => AND_2:An7.B
+M6 <= adder6bit:adder2.C
+M5 <= adder6bit:adder2.S[5]
+M4 <= adder6bit:adder2.S[4]
+M3 <= adder6bit:adder2.S[3]
+M2 <= adder6bit:adder2.S[2]
+M1 <= adder6bit:adder2.S[1]
+M0 <= adder6bit:adder2.S[0]
+
+
+|DUT|multiplier:add_instance|AND_2:An1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|AND_2:An2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|AND_2:An3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|AND_2:An4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|AND_2:An5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|AND_2:An6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|AND_2:An7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|AND_2:An8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|AND_2:An9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|AND_2:An10
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|AND_2:An11
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|AND_2:An12
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1
+A[0] => f_adder:f1.A
+A[1] => f_adder:f2.A
+A[2] => f_adder:f3.A
+A[3] => f_adder:f4.A
+A[4] => f_adder:f5.A
+A[5] => f_adder:f6.A
+B[0] => f_adder:f1.B
+B[1] => f_adder:f2.B
+B[2] => f_adder:f3.B
+B[3] => f_adder:f4.B
+B[4] => f_adder:f5.B
+B[5] => f_adder:f6.B
+S[0] <= f_adder:f1.S
+S[1] <= f_adder:f2.S
+S[2] <= f_adder:f3.S
+S[3] <= f_adder:f4.S
+S[4] <= f_adder:f5.S
+S[5] <= f_adder:f6.S
+C <= f_adder:f6.Cout
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1
+A => and_gate:A1.A
+A => and_gate:A2.A
+A => xor_gate:X1.A
+B => and_gate:A1.B
+B => and_gate:A3.B
+B => xor_gate:X1.B
+Cin => and_gate:A2.B
+Cin => and_gate:A3.A
+Cin => xor_gate:X2.A
+S <= xor_gate:X2.Y
+Cout <= or_gate:O2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|and_gate:A1
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|and_gate:A1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|and_gate:A1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|and_gate:A2
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|and_gate:A2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|and_gate:A2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|and_gate:A3
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|and_gate:A3|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|and_gate:A3|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|or_gate:O1
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|or_gate:O1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|or_gate:O1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|or_gate:O1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|or_gate:O2
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|or_gate:O2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|or_gate:O2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|or_gate:O2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|xor_gate:X1
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|xor_gate:X1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|xor_gate:X1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|xor_gate:X1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|xor_gate:X1|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|xor_gate:X2
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|xor_gate:X2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|xor_gate:X2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|xor_gate:X2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f1|xor_gate:X2|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2
+A => and_gate:A1.A
+A => and_gate:A2.A
+A => xor_gate:X1.A
+B => and_gate:A1.B
+B => and_gate:A3.B
+B => xor_gate:X1.B
+Cin => and_gate:A2.B
+Cin => and_gate:A3.A
+Cin => xor_gate:X2.A
+S <= xor_gate:X2.Y
+Cout <= or_gate:O2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|and_gate:A1
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|and_gate:A1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|and_gate:A1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|and_gate:A2
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|and_gate:A2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|and_gate:A2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|and_gate:A3
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|and_gate:A3|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|and_gate:A3|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|or_gate:O1
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|or_gate:O1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|or_gate:O1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|or_gate:O1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|or_gate:O2
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|or_gate:O2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|or_gate:O2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|or_gate:O2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|xor_gate:X1
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|xor_gate:X1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|xor_gate:X1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|xor_gate:X1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|xor_gate:X1|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|xor_gate:X2
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|xor_gate:X2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|xor_gate:X2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|xor_gate:X2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f2|xor_gate:X2|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3
+A => and_gate:A1.A
+A => and_gate:A2.A
+A => xor_gate:X1.A
+B => and_gate:A1.B
+B => and_gate:A3.B
+B => xor_gate:X1.B
+Cin => and_gate:A2.B
+Cin => and_gate:A3.A
+Cin => xor_gate:X2.A
+S <= xor_gate:X2.Y
+Cout <= or_gate:O2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|and_gate:A1
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|and_gate:A1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|and_gate:A1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|and_gate:A2
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|and_gate:A2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|and_gate:A2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|and_gate:A3
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|and_gate:A3|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|and_gate:A3|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|or_gate:O1
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|or_gate:O1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|or_gate:O1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|or_gate:O1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|or_gate:O2
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|or_gate:O2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|or_gate:O2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|or_gate:O2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|xor_gate:X1
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|xor_gate:X1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|xor_gate:X1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|xor_gate:X1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|xor_gate:X1|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|xor_gate:X2
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|xor_gate:X2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|xor_gate:X2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|xor_gate:X2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f3|xor_gate:X2|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4
+A => and_gate:A1.A
+A => and_gate:A2.A
+A => xor_gate:X1.A
+B => and_gate:A1.B
+B => and_gate:A3.B
+B => xor_gate:X1.B
+Cin => and_gate:A2.B
+Cin => and_gate:A3.A
+Cin => xor_gate:X2.A
+S <= xor_gate:X2.Y
+Cout <= or_gate:O2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|and_gate:A1
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|and_gate:A1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|and_gate:A1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|and_gate:A2
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|and_gate:A2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|and_gate:A2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|and_gate:A3
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|and_gate:A3|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|and_gate:A3|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|or_gate:O1
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|or_gate:O1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|or_gate:O1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|or_gate:O1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|or_gate:O2
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|or_gate:O2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|or_gate:O2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|or_gate:O2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|xor_gate:X1
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|xor_gate:X1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|xor_gate:X1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|xor_gate:X1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|xor_gate:X1|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|xor_gate:X2
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|xor_gate:X2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|xor_gate:X2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|xor_gate:X2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f4|xor_gate:X2|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5
+A => and_gate:A1.A
+A => and_gate:A2.A
+A => xor_gate:X1.A
+B => and_gate:A1.B
+B => and_gate:A3.B
+B => xor_gate:X1.B
+Cin => and_gate:A2.B
+Cin => and_gate:A3.A
+Cin => xor_gate:X2.A
+S <= xor_gate:X2.Y
+Cout <= or_gate:O2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|and_gate:A1
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|and_gate:A1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|and_gate:A1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|and_gate:A2
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|and_gate:A2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|and_gate:A2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|and_gate:A3
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|and_gate:A3|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|and_gate:A3|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|or_gate:O1
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|or_gate:O1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|or_gate:O1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|or_gate:O1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|or_gate:O2
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|or_gate:O2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|or_gate:O2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|or_gate:O2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|xor_gate:X1
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|xor_gate:X1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|xor_gate:X1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|xor_gate:X1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|xor_gate:X1|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|xor_gate:X2
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|xor_gate:X2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|xor_gate:X2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|xor_gate:X2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f5|xor_gate:X2|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6
+A => and_gate:A1.A
+A => and_gate:A2.A
+A => xor_gate:X1.A
+B => and_gate:A1.B
+B => and_gate:A3.B
+B => xor_gate:X1.B
+Cin => and_gate:A2.B
+Cin => and_gate:A3.A
+Cin => xor_gate:X2.A
+S <= xor_gate:X2.Y
+Cout <= or_gate:O2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|and_gate:A1
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|and_gate:A1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|and_gate:A1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|and_gate:A2
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|and_gate:A2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|and_gate:A2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|and_gate:A3
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|and_gate:A3|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|and_gate:A3|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|or_gate:O1
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|or_gate:O1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|or_gate:O1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|or_gate:O1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|or_gate:O2
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|or_gate:O2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|or_gate:O2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|or_gate:O2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|xor_gate:X1
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|xor_gate:X1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|xor_gate:X1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|xor_gate:X1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|xor_gate:X1|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|xor_gate:X2
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|xor_gate:X2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|xor_gate:X2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|xor_gate:X2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder1|f_adder:f6|xor_gate:X2|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2
+A[0] => f_adder:f1.A
+A[1] => f_adder:f2.A
+A[2] => f_adder:f3.A
+A[3] => f_adder:f4.A
+A[4] => f_adder:f5.A
+A[5] => f_adder:f6.A
+B[0] => f_adder:f1.B
+B[1] => f_adder:f2.B
+B[2] => f_adder:f3.B
+B[3] => f_adder:f4.B
+B[4] => f_adder:f5.B
+B[5] => f_adder:f6.B
+S[0] <= f_adder:f1.S
+S[1] <= f_adder:f2.S
+S[2] <= f_adder:f3.S
+S[3] <= f_adder:f4.S
+S[4] <= f_adder:f5.S
+S[5] <= f_adder:f6.S
+C <= f_adder:f6.Cout
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1
+A => and_gate:A1.A
+A => and_gate:A2.A
+A => xor_gate:X1.A
+B => and_gate:A1.B
+B => and_gate:A3.B
+B => xor_gate:X1.B
+Cin => and_gate:A2.B
+Cin => and_gate:A3.A
+Cin => xor_gate:X2.A
+S <= xor_gate:X2.Y
+Cout <= or_gate:O2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|and_gate:A1
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|and_gate:A1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|and_gate:A1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|and_gate:A2
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|and_gate:A2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|and_gate:A2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|and_gate:A3
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|and_gate:A3|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|and_gate:A3|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|or_gate:O1
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|or_gate:O1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|or_gate:O1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|or_gate:O1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|or_gate:O2
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|or_gate:O2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|or_gate:O2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|or_gate:O2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|xor_gate:X1
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|xor_gate:X1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|xor_gate:X1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|xor_gate:X1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|xor_gate:X1|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|xor_gate:X2
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|xor_gate:X2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|xor_gate:X2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|xor_gate:X2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f1|xor_gate:X2|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2
+A => and_gate:A1.A
+A => and_gate:A2.A
+A => xor_gate:X1.A
+B => and_gate:A1.B
+B => and_gate:A3.B
+B => xor_gate:X1.B
+Cin => and_gate:A2.B
+Cin => and_gate:A3.A
+Cin => xor_gate:X2.A
+S <= xor_gate:X2.Y
+Cout <= or_gate:O2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|and_gate:A1
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|and_gate:A1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|and_gate:A1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|and_gate:A2
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|and_gate:A2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|and_gate:A2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|and_gate:A3
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|and_gate:A3|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|and_gate:A3|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|or_gate:O1
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|or_gate:O1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|or_gate:O1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|or_gate:O1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|or_gate:O2
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|or_gate:O2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|or_gate:O2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|or_gate:O2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|xor_gate:X1
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|xor_gate:X1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|xor_gate:X1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|xor_gate:X1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|xor_gate:X1|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|xor_gate:X2
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|xor_gate:X2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|xor_gate:X2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|xor_gate:X2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f2|xor_gate:X2|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3
+A => and_gate:A1.A
+A => and_gate:A2.A
+A => xor_gate:X1.A
+B => and_gate:A1.B
+B => and_gate:A3.B
+B => xor_gate:X1.B
+Cin => and_gate:A2.B
+Cin => and_gate:A3.A
+Cin => xor_gate:X2.A
+S <= xor_gate:X2.Y
+Cout <= or_gate:O2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|and_gate:A1
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|and_gate:A1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|and_gate:A1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|and_gate:A2
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|and_gate:A2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|and_gate:A2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|and_gate:A3
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|and_gate:A3|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|and_gate:A3|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|or_gate:O1
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|or_gate:O1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|or_gate:O1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|or_gate:O1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|or_gate:O2
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|or_gate:O2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|or_gate:O2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|or_gate:O2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|xor_gate:X1
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|xor_gate:X1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|xor_gate:X1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|xor_gate:X1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|xor_gate:X1|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|xor_gate:X2
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|xor_gate:X2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|xor_gate:X2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|xor_gate:X2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f3|xor_gate:X2|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4
+A => and_gate:A1.A
+A => and_gate:A2.A
+A => xor_gate:X1.A
+B => and_gate:A1.B
+B => and_gate:A3.B
+B => xor_gate:X1.B
+Cin => and_gate:A2.B
+Cin => and_gate:A3.A
+Cin => xor_gate:X2.A
+S <= xor_gate:X2.Y
+Cout <= or_gate:O2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|and_gate:A1
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|and_gate:A1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|and_gate:A1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|and_gate:A2
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|and_gate:A2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|and_gate:A2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|and_gate:A3
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|and_gate:A3|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|and_gate:A3|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|or_gate:O1
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|or_gate:O1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|or_gate:O1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|or_gate:O1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|or_gate:O2
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|or_gate:O2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|or_gate:O2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|or_gate:O2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|xor_gate:X1
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|xor_gate:X1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|xor_gate:X1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|xor_gate:X1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|xor_gate:X1|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|xor_gate:X2
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|xor_gate:X2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|xor_gate:X2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|xor_gate:X2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f4|xor_gate:X2|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5
+A => and_gate:A1.A
+A => and_gate:A2.A
+A => xor_gate:X1.A
+B => and_gate:A1.B
+B => and_gate:A3.B
+B => xor_gate:X1.B
+Cin => and_gate:A2.B
+Cin => and_gate:A3.A
+Cin => xor_gate:X2.A
+S <= xor_gate:X2.Y
+Cout <= or_gate:O2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|and_gate:A1
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|and_gate:A1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|and_gate:A1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|and_gate:A2
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|and_gate:A2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|and_gate:A2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|and_gate:A3
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|and_gate:A3|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|and_gate:A3|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|or_gate:O1
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|or_gate:O1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|or_gate:O1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|or_gate:O1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|or_gate:O2
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|or_gate:O2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|or_gate:O2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|or_gate:O2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|xor_gate:X1
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|xor_gate:X1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|xor_gate:X1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|xor_gate:X1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|xor_gate:X1|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|xor_gate:X2
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|xor_gate:X2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|xor_gate:X2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|xor_gate:X2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f5|xor_gate:X2|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6
+A => and_gate:A1.A
+A => and_gate:A2.A
+A => xor_gate:X1.A
+B => and_gate:A1.B
+B => and_gate:A3.B
+B => xor_gate:X1.B
+Cin => and_gate:A2.B
+Cin => and_gate:A3.A
+Cin => xor_gate:X2.A
+S <= xor_gate:X2.Y
+Cout <= or_gate:O2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|and_gate:A1
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|and_gate:A1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|and_gate:A1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|and_gate:A2
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|and_gate:A2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|and_gate:A2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|and_gate:A3
+A => NAND_2:N1.A
+B => NAND_2:N1.B
+Y <= NAND_2:N2.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|and_gate:A3|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|and_gate:A3|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|or_gate:O1
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|or_gate:O1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|or_gate:O1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|or_gate:O1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|or_gate:O2
+A => NAND_2:N1.A
+A => NAND_2:N1.B
+B => NAND_2:N2.A
+B => NAND_2:N2.B
+Y <= NAND_2:N3.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|or_gate:O2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|or_gate:O2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|or_gate:O2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|xor_gate:X1
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|xor_gate:X1|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|xor_gate:X1|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|xor_gate:X1|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|xor_gate:X1|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|xor_gate:X2
+A => NAND_2:N1.A
+A => NAND_2:N2.A
+B => NAND_2:N1.B
+B => NAND_2:N3.B
+Y <= NAND_2:N4.Y
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|xor_gate:X2|NAND_2:N1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|xor_gate:X2|NAND_2:N2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|xor_gate:X2|NAND_2:N3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|multiplier:add_instance|adder6bit:adder2|f_adder:f6|xor_gate:X2|NAND_2:N4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

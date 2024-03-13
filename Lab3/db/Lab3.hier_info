@@ -1,0 +1,291 @@
+|DUT
+input_vector[0] => Primer:add_instance.E
+input_vector[1] => Primer:add_instance.D
+input_vector[2] => Primer:add_instance.C
+input_vector[3] => Primer:add_instance.B
+input_vector[4] => Primer:add_instance.A
+output_vector[0] << Primer:add_instance.Y
+
+
+|DUT|Primer:add_instance
+A => NAND_2:NAND1.A
+A => NAND_2:NAND1.B
+A => AND_4:AND5.X3
+A => AND_4:AND6.X3
+A => AND_4:AND7.X3
+B => NAND_2:NAND2.A
+B => NAND_2:NAND2.B
+B => AND_4:AND6.X1
+C => NAND_2:NAND3.A
+C => NAND_2:NAND3.B
+C => AND_4:AND3.X1
+C => AND_4:AND8.X2
+C => AND_4:AND6.X2
+C => AND_4:AND7.X2
+D => NAND_2:NAND4.A
+D => NAND_2:NAND4.B
+D => AND_4:AND1.X1
+D => AND_4:AND2.X0
+D => AND_4:AND7.X1
+E => AND_4:AND1.X0
+E => AND_4:AND3.X0
+E => AND_4:AND8.X0
+E => AND_4:AND5.X0
+E => AND_4:AND6.X0
+E => AND_4:AND7.X0
+Y <= OR7:OR1.O
+
+
+|DUT|Primer:add_instance|NAND_2:NAND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|NAND_2:NAND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|NAND_2:NAND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|NAND_2:NAND4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND1
+X3 => AND_2:AND1.A
+X2 => AND_2:AND1.B
+X1 => AND_2:AND2.A
+X0 => AND_2:AND2.B
+O <= AND_2:AND3.Y
+
+
+|DUT|Primer:add_instance|AND_4:AND1|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND1|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND1|AND_2:AND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND2
+X3 => AND_2:AND1.A
+X2 => AND_2:AND1.B
+X1 => AND_2:AND2.A
+X0 => AND_2:AND2.B
+O <= AND_2:AND3.Y
+
+
+|DUT|Primer:add_instance|AND_4:AND2|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND2|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND2|AND_2:AND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND3
+X3 => AND_2:AND1.A
+X2 => AND_2:AND1.B
+X1 => AND_2:AND2.A
+X0 => AND_2:AND2.B
+O <= AND_2:AND3.Y
+
+
+|DUT|Primer:add_instance|AND_4:AND3|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND3|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND3|AND_2:AND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND8
+X3 => AND_2:AND1.A
+X2 => AND_2:AND1.B
+X1 => AND_2:AND2.A
+X0 => AND_2:AND2.B
+O <= AND_2:AND3.Y
+
+
+|DUT|Primer:add_instance|AND_4:AND8|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND8|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND8|AND_2:AND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND5
+X3 => AND_2:AND1.A
+X2 => AND_2:AND1.B
+X1 => AND_2:AND2.A
+X0 => AND_2:AND2.B
+O <= AND_2:AND3.Y
+
+
+|DUT|Primer:add_instance|AND_4:AND5|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND5|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND5|AND_2:AND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND6
+X3 => AND_2:AND1.A
+X2 => AND_2:AND1.B
+X1 => AND_2:AND2.A
+X0 => AND_2:AND2.B
+O <= AND_2:AND3.Y
+
+
+|DUT|Primer:add_instance|AND_4:AND6|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND6|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND6|AND_2:AND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND7
+X3 => AND_2:AND1.A
+X2 => AND_2:AND1.B
+X1 => AND_2:AND2.A
+X0 => AND_2:AND2.B
+O <= AND_2:AND3.Y
+
+
+|DUT|Primer:add_instance|AND_4:AND7|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND7|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|AND_4:AND7|AND_2:AND3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|OR7:OR1
+A => OR_2:OR1.A
+B => OR_2:OR1.B
+C => OR_2:OR2.A
+D => OR_2:OR2.B
+E => OR_2:OR3.A
+F => OR_2:OR3.B
+G => OR_2:OR5.B
+O <= OR_2:OR6.Y
+
+
+|DUT|Primer:add_instance|OR7:OR1|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|OR7:OR1|OR_2:OR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|OR7:OR1|OR_2:OR3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|OR7:OR1|OR_2:OR4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|OR7:OR1|OR_2:OR5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Primer:add_instance|OR7:OR1|OR_2:OR6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

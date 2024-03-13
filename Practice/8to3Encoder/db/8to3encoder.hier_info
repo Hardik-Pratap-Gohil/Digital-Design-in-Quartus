@@ -1,0 +1,136 @@
+|DUT
+input_vector[0] => encoder8to3:add_instance.E
+input_vector[1] => encoder8to3:add_instance.Y0
+input_vector[2] => encoder8to3:add_instance.Y1
+input_vector[3] => encoder8to3:add_instance.Y2
+input_vector[4] => encoder8to3:add_instance.Y3
+input_vector[5] => encoder8to3:add_instance.Y4
+input_vector[6] => encoder8to3:add_instance.Y5
+input_vector[7] => encoder8to3:add_instance.Y6
+input_vector[8] => encoder8to3:add_instance.Y7
+output_vector[0] <= encoder8to3:add_instance.A0
+output_vector[1] <= encoder8to3:add_instance.A1
+output_vector[2] <= encoder8to3:add_instance.A2
+
+
+|DUT|encoder8to3:add_instance
+Y7 => encoder:E1.A
+Y6 => encoder:E1.B
+Y5 => encoder:E2.A
+Y4 => encoder:E2.B
+Y3 => encoder:E1.C
+Y3 => OR_2:O3.A
+Y2 => encoder:E1.D
+Y2 => OR_2:O3.B
+Y1 => encoder:E2.C
+Y0 => encoder:E2.D
+E => encoder:E1.E
+E => encoder:E2.E
+E => AND_2:An1.B
+A2 <= OR_2:O1.Y
+A1 <= OR_2:O4.Y
+A0 <= OR_2:O2.Y
+
+
+|DUT|encoder8to3:add_instance|encoder:E1
+A => OR_2:O1.A
+A => OR_2:O2.A
+B => OR_2:O1.B
+C => OR_2:O2.B
+D => ~NO_FANOUT~
+E => AND_2:A1.A
+E => AND_2:A2.A
+Y1 <= AND_2:A1.Y
+Y0 <= AND_2:A2.Y
+
+
+|DUT|encoder8to3:add_instance|encoder:E1|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|encoder8to3:add_instance|encoder:E1|OR_2:O2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|encoder8to3:add_instance|encoder:E1|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|encoder8to3:add_instance|encoder:E1|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|encoder8to3:add_instance|encoder:E2
+A => OR_2:O1.A
+A => OR_2:O2.A
+B => OR_2:O1.B
+C => OR_2:O2.B
+D => ~NO_FANOUT~
+E => AND_2:A1.A
+E => AND_2:A2.A
+Y1 <= AND_2:A1.Y
+Y0 <= AND_2:A2.Y
+
+
+|DUT|encoder8to3:add_instance|encoder:E2|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|encoder8to3:add_instance|encoder:E2|OR_2:O2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|encoder8to3:add_instance|encoder:E2|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|encoder8to3:add_instance|encoder:E2|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|encoder8to3:add_instance|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|encoder8to3:add_instance|OR_2:O2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|encoder8to3:add_instance|OR_2:O3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|encoder8to3:add_instance|AND_2:An1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|encoder8to3:add_instance|OR_2:O4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

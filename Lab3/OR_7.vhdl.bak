@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+
+entity OR7 is
+	port (A,B,C,D,E,F,G: in std_logic; O: out std_logic);
+end entity OR7;
+
+architecture Struct of OR7 is
+	signal AB,CD,EF,S1,S2 : std_logic;
+	entity OR_GATE is
+		port (A,B: in std_logic; OUTPUT: out std_logic);
+	end entity OR_GATE;
+begin
+	OR1: OR_GATE port map (A=>A,B=>B,OUTPUT=>AB);
+	OR2: OR_GATE port map (A=>C,B=>D,OUTPUT=>CD);
+	OR3: OR_GATE port map (A=>E,B=>F,OUTPUT=>EF);
+	
+	OR4: OR_GATE port map (A=>AB,B=>CD,OUTPUT=>S1);
+	OR5: OR_GATE port map (A=>EF,B=>G,OUTPUT=>S2);
+	
+	OR6: OR_GATE port map (A=>S2,B=>S1,OUTPUT=>O);
+end Struct;

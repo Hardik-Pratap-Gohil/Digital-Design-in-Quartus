@@ -1,0 +1,14 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+
+entity PrimeDetector is
+	port(X4,X3,X2,X1,X0: in std_logic; Y: out std_logic);
+end entity PrimeDetector;
+
+architecture Bankai of PrimeDetector is
+
+begin
+	
+end architecture struct;
